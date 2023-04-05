@@ -45,6 +45,9 @@ public class ResOfSignalAnalysis implements Serializable {
         this.avg = avg;
     }
 
+    public ResOfSignalAnalysis() {
+    }
+
     @Override
     public String toString() {
         return "ResOfSignalAnalysis{" +

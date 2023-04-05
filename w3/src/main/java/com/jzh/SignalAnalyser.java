@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * @date 04/04 004 5:14 PM
  */
 public class SignalAnalyser {
-    private final static Integer N = 50;
+    public final static Integer N = 50;
 
     public static void main(String[] args) throws Exception {
         ArrayList<Double> signals = new ArrayList<>();

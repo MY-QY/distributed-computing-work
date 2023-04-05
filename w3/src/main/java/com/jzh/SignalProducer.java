@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class SignalProducer {
     // 间隔时间 100 ms
-    private final static int interval = 1000;
+    private final static int interval = 100;
 
     public static void main(String[] args) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
@@ -26,7 +26,7 @@ public class SignalProducer {
         double stddev = 10.0; // 标准差
         while (true) {
             double randomValue = random.nextGaussian() * stddev + mean;
-            System.out.println("产生随机值: " + randomValue);
+            System.out.println("产生随机信号: " + randomValue);
             chan.basicPublish("", MyQueues.SIGNAL_QUEUE_NAME, null, String.valueOf(randomValue).getBytes());
             Thread.sleep(interval);
         }
