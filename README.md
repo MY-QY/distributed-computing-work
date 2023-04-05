@@ -20,8 +20,6 @@ BookList queryByName(String name) 按书名查询符合条件的书籍对象列�
 
 bool delete(int bookID) 删除指定ID号的书籍对象。
 
----
-
 实现架构图：
 
 ![](./w2/res/架构图.jpg)
@@ -47,8 +45,6 @@ bool delete(int bookID) 删除指定ID号的书籍对象。
    （2）实时显示随机信号统计分析结果。
 
 4. 消息中间件任选。
-
----
 
 实现架构图：
 
