@@ -5,7 +5,7 @@ spark = SparkSession.builder.appName("StudentScores").getOrCreate()
 
 # 读取输入文件并创建 DataFrame
 input_file = spark.read.text("/input/p1_input_file.txt")
-df = input_file.selectExpr("split(value, ', ') as data")
+df = input_file.selectExpr("split(value, ',') as data")
 
 # 将 DataFrame 转换为 RDD
 rdd = df.rdd.map(lambda row: (row.data[0], row.data[1], row.data[2], row.data[3], float(row.data[4])))
